@@ -5,6 +5,11 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# separate aliases file
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 # set exports
 export PATH=${PATH}:$HOME/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin/:/usr/local/bin:/usr/X11R6/bin
 export LC_ALL=C
@@ -25,23 +30,4 @@ export HISTSIZE=5000
 # ignore commands in history
 export HISTIGNORE='ls:ls -la:pwd:date:'
 
-# add alias
-alias ls='ls -la'
-# get rid of command not found
-alias cd..='cd ..'
-alias ..='cd ..'
-# set vim as default
-alias vi=vim
-
-# better safe then sorry
-# do not delete / or prompt if deleting more than 3 files at a time
-alias rm='rm -I --preserve-root'
- 
-# confirmation
-alias mv='mv -i'
-alias cp='cp -i'
-alias ln='ln -i'
-
-# directory shortcuts
-alias cdsites='cd ~/Sites/'
 
