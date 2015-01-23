@@ -93,6 +93,9 @@ set laststatus=2
 set statusline=\ %{getcwd()}/%<%f\ " current dir
 set statusline+=%=%-14.(\ Line:\ %l,%c%V%)\ %p%% " Right aligned file
 
+" Show the filename in the window titlebar
+set title
+
 " ---------------------------------------- "
 "  Colors and Fonts
 " ---------------------------------------- "
