@@ -1,4 +1,4 @@
-# .bashrc
+#.bashrc
 
 # source global definitions
 if [ -f /etc/bashrc ]; then
@@ -35,5 +35,6 @@ export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=5000
 # ignore commands in history
 export HISTIGNORE='ls:ls -la:pwd:date:'
-
+# append to the Bash history file, rather than overwriting it
+shopt -s histappend;
 
