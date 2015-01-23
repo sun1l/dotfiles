@@ -2,12 +2,18 @@
 
 # source global definitions
 if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+    . /etc/bashrc;
 fi
 
-# separate aliases file
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+# source aliases file
+if [ -f ~/.aliases ]; then
+    . ~/.aliases;
+fi
+
+# git command autocomplete
+# http://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks
+if [ -f ~/git-completion.bash ]; then
+    . ~/git-completion.bash;
 fi
 
 # set exports
